@@ -46,7 +46,6 @@ The IDE is just a simple node project with few dependencies, and can be setup wi
 
 ```bash
 git clone --recursive https://github.com/thoth-tech/SplashkitOnline.git
-cd SplashkitOnline/Browser_IDE/
 npm install
 ```
 
