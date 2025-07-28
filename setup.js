@@ -72,8 +72,8 @@ const requiredFiles = [
         console.log("Extracted " + cxxCompilerDir + "/compiler.zip");
     }),
     new RequiredFile(WhyPenguinsRepoPath, "cxx-audio-support-binaries/Browser_IDE/compilers/cxx/bin/wasi-sysroot.zip", cxxCompilerDir),
-    new RequiredFile(WhyPenguinsRepoPath, "cxx-audio-support-binaries/Browser_IDE/runtimes/cxx/bin/SplashKitBackendWASMCPP.js", cxxRuntimeDir),
-    new RequiredFile(WhyPenguinsRepoPath, "cxx-audio-support-binaries/Browser_IDE/runtimes/cxx/bin/SplashKitBackendWASMCPP.worker.js", cxxRuntimeDir)
+    // new RequiredFile(WhyPenguinsRepoPath, "cxx-audio-support-binaries/Browser_IDE/runtimes/cxx/bin/SplashKitBackendWASMCPP.js", cxxRuntimeDir),
+    // new RequiredFile(WhyPenguinsRepoPath, "cxx-audio-support-binaries/Browser_IDE/runtimes/cxx/bin/SplashKitBackendWASMCPP.worker.js", cxxRuntimeDir)
 ];
 
 exports.run = async function(){
