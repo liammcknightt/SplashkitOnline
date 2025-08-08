@@ -110,7 +110,6 @@ cd ../../
 echo "========================================"
 echo "Re-Structure Static Site"
 echo "========================================"
-cd ./splashkitonline
 
 # if changed, remember to update the explicit excludes above
 mv node_modules/codemirror codemirror-5.65.15
