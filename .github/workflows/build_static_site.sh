@@ -115,6 +115,5 @@ mv node_modules/@babel/standalone babel
 mv node_modules/split.js/dist split.js
 mv node_modules/mime/dist mime
 rm -rf js-lzma/data
-mv ../DemoProjects DemoProjects
 
 cd ../
