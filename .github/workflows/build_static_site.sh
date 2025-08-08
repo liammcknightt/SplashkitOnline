@@ -12,10 +12,10 @@ if ! git diff --quiet $(git merge-base "origin/main" "$1").."$1" -- SplashKitWas
     echo "========================================"
     mkdir -p ./splashkitonline/SplashKitWasm/prebuilt/cxx/compiler/
     cd ./splashkitonline/SplashKitWasm/prebuilt/cxx/compiler/
-    wget -O clang++.js https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/Browser_IDE/compilers/cxx/bin/clang++.js
-    wget -O clang.wasm.lzma https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/Browser_IDE/compilers/cxx/bin/clang.wasm.lzma
-    wget -O wasm-ld.js https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/Browser_IDE/compilers/cxx/bin/wasm-ld.js
-    wget -O lld.wasm.lzma https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/Browser_IDE/compilers/cxx/bin/lld.wasm.lzma
+    wget -O clang++.js https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/compilers/cxx/bin/clang++.js
+    wget -O clang.wasm.lzma https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/compilers/cxx/bin/clang.wasm.lzma
+    wget -O wasm-ld.js https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/compilers/cxx/bin/wasm-ld.js
+    wget -O lld.wasm.lzma https://raw.githubusercontent.com/WhyPenguins/SplashkitOnline/github-live/compilers/cxx/bin/lld.wasm.lzma
     wget -O sysroot.zip https://github.com/WhyPenguins/SplashkitOnline/raw/refs/heads/cxx_language_backend_binaries/SplashKitWasm/prebuilt/sysroot.zip
     # decompress them - silly since they'll just be re-compressed again, but it is what it is for now...
     xz -d clang.wasm.lzma
@@ -91,7 +91,7 @@ else
     cd ../
 
     # copy in all the untracked files!
-    rsync -av --progress --exclude-from="$EXCLUDE_FILE" "prebuilt/" "splashkitonline/Browser_IDE/"
+    rsync -av --progress --exclude-from="$EXCLUDE_FILE" "prebuilt/" "splashkitonline/"
 
 fi
 
@@ -99,7 +99,7 @@ fi
 echo "========================================"
 echo "Install Node Dependencies"
 echo "========================================"
-cd ./splashkitonline/Browser_IDE
+cd ./splashkitonline
 
 npm install
 
@@ -110,7 +110,7 @@ cd ../../
 echo "========================================"
 echo "Re-Structure Static Site"
 echo "========================================"
-cd ./splashkitonline/Browser_IDE
+cd ./splashkitonline
 
 # if changed, remember to update the explicit excludes above
 mv node_modules/codemirror codemirror-5.65.15
