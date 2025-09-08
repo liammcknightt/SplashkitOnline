@@ -19,6 +19,9 @@ public partial class CSharpCodeRunner
     static async Task<MetadataReference> LoadAssemblyFromServer(string assemblyName)
     {
         var baseUrl = GetHRef();
+
+        //Mofify this variable to be a new C# dll instead of using 
+        //Bidning generator
         var url = $"/CSharpWasmExpo/bin/{assemblyName}";
 
         try
