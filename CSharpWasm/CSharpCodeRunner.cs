@@ -19,6 +19,8 @@ public partial class CSharpCodeRunner
     static async Task<MetadataReference> LoadAssemblyFromServer(string assemblyName)
     {
         var baseUrl = GetHRef();
+        // This line should be changed in future to allow for 
+        // a different dll file than the one generatered
         var url = $"/CSharpWasmExpo/bin/{assemblyName}";
 
         try
