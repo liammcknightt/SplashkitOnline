@@ -67,9 +67,9 @@ else
 
     # first let's get a list of files _not_ to copy
     cd ./splashkitonline
-    TRACKED_FILES=$(git log --pretty=format: --name-only --diff-filter=A -- Browser_IDE| sort - | sed '/^$/d')
-    EXCLUDE_FILE=$(mktemp)
-    echo "$TRACKED_FILES" | sed "s|^Browser_IDE||" > "$EXCLUDE_FILE"
+    #TRACKED_FILES=$(git log --pretty=format: --name-only --diff-filter=A -- Browser_IDE| sort - | sed '/^$/d')
+    #EXCLUDE_FILE=$(mktemp)
+    #echo "$TRACKED_FILES" | sed "s|^Browser_IDE||" > "$EXCLUDE_FILE"
 
     # add some explicit excludes
     echo "/codemirror-5.65.15" >> "$EXCLUDE_FILE"
