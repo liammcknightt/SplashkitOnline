@@ -69,5 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
   Object.keys(themes).forEach(name => sel.add(new Option(name, name))); //Visible text, value
   //Change the theme when the user picks something
   sel.onchange = () => applyTheme(themes[sel.value]);
+
+
+  // when user picks a new theme
+  sel.onchange = () => {
+    const selected = sel.value;
+    if (!selected) {
+      applyTheme(null); // reset
+      localStorage.removeItem("skoTheme");
+    } else {
+      applyTheme(themes[selected]);
+      localStorage.setItem("skoTheme", selected);
+    }
+  };
+
 });
 
